@@ -8,7 +8,7 @@ const animate = (sel, shapes) => {
   const start = shapes[0]
   const end = shapes[1]
 
-  const interpolator = interpolateAll(start, end, { single: true, maxSegmentLength: 5 });
+  const interpolator = interpolateAll(start, end, { single: true, maxSegmentLength: 5 })
 
   sel
     .transition()

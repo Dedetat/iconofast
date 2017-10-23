@@ -16,7 +16,7 @@ const animate = (sel, shapes) => {
     .attrTween('d', () => interpolator)
     // FIXME : mutation
     .on('end', () => {
-      setTimeout(() => { sel.call(animate, shapes.slice(1).concat([shapes[0]])) }, 500 )
+      setTimeout(() => { sel.call(animate, shapes.slice(1).concat([shapes[0]])) }, 500)
     })
 }
 

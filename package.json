@@ -1,0 +1,10 @@
+{
+  "name": "iconofast",
+  "version": "1.0.0",
+  "private": true,
+  "repository": "git@github.com:Dedetat/iconofast.git",
+  "license": "MIT",
+  "dependencies": {
+    "flubber": "^0.4.0"
+  }
+}

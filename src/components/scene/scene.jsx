@@ -24,29 +24,29 @@ class Scene extends Component {
   attach = idx => (e) => {
     const center = 'M250 250Z'
 
-    const getNbPath = path => path.split(/m|M/g).length - 1
-    const countMaxPath = array => array.map(getNbPath).sort((a, b) => b - a)[0]
-    const completePath = (complete, length) => (path) => {
-      const nbPath = getNbPath(path)
+    const getNbShapes = path => path.split(/m|M/g).length - 1
+    const countMaxShapes = array => array.map(getNbShapes).sort((a, b) => b - a)[0]
+    const completePath = (filler, length) => (path) => {
+      const nbShapes = getNbShapes(path)
       let genPath = path
 
-      for (let i = 0; i < length - nbPath; i += 1) {
-        genPath = `${genPath}${center}`
+      for (let i = 0; i < length - nbShapes; i += 1) {
+        genPath = `${genPath}${filler}`
       }
 
       return genPath
     }
     const normalize = draws => {
-      const maxPath = countMaxPath(flatten(draws))
-      const complete = completePath(center, maxPath)
-      const nbLayouts = draws.map(draw => draw.length).sort((a, b) => b - a)[0]
+      const maxShapes = countMaxShapes(flatten(draws))
+      const complete = completePath(center, maxShapes)
+      const nbLayers = draws.map(draw => draw.length).sort((a, b) => b - a)[0]
 
       return draws
-        // add layouts
+        // add layers
         .map(draw => {
           const newDraw = [...draw]
 
-          for (let i = 0; i < nbLayouts - draw.length; i += 1) {
+          for (let i = 0; i < nbLayers - draw.length; i += 1) {
             newDraw.push('')
           }
 

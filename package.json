@@ -9,7 +9,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "lint:js": "eslint --ext js src",
+    "lint:js": "eslint --ext js,jsx src",
     "lint": "npm-run-all --parallel lint:*",
     "ci": "npm-run-all --parallel lint"
   },
@@ -49,6 +49,8 @@
     },
     "rules": {
       "import/no-extraneous-dependencies": "off",
+      "react/forbid-prop-types": "off",
+      "react/no-typos": "off",
       "semi": [
         2,
         "never"

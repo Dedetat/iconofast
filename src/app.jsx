@@ -1,11 +1,11 @@
 import React from 'react'
 import { Provider } from 'mobx-react'
-import Scene from './components/scene'
+import MainScreen from './screens/main'
 import createStore from './store'
 
 const App = () => (
   <Provider store={createStore()}>
-    <Scene />
+    <MainScreen />
   </Provider>
 )
 

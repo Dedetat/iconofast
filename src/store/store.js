@@ -1,16 +1,27 @@
 import { types, onPatch } from 'mobx-state-tree'
+import random from 'lodash/random'
 import Draw from './draw'
+
+/* eslint-disable no-param-reassign */
 
 const Store = types
   .model({
-    current: types.reference(Draw),
+    current: types.maybe(types.reference(Draw)),
     draws: types.array(Draw),
     score: 0,
   })
   .named('Store')
-  .preProcessSnapshot(snapshot => ({
-    ...snapshot,
-    current: snapshot.draws[0].name,
+  .actions(self => ({
+    afterCreate: () => {
+      self.current = self.draws[random(self.draws.length - 1, 0)]
+    },
+    verify: (choice) => {
+      if (self.current.goodChoice === choice) {
+        self.score += random(10000, 8000) // TODO : make the score based on time
+        self.current = self.draws[random(self.draws.length - 1, 0)]
+        self.current.shuffle()
+      }
+    },
   }))
 
 export default () => {
@@ -23,10 +34,10 @@ export default () => {
           'm246.07 157.86l-77.83 58.25 76.77 57.99 1.06-116.24z',
         ],
         choices: [
-          'http://hello.png',
-          'http://todo.png',
+          '/img/vscode-blue.png',
+          '/img/vscode-orange.png',
         ],
-        goodChoice: 'http://todo.png',
+        goodChoice: '/img/vscode-blue.png',
       },
       {
         name: 'mobx-state-tree',

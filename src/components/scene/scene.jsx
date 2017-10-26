@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { PropTypes as MobxPropTypes } from 'mobx-react'
 import { interpolateAll, splitPathString } from 'flubber'
 import * as d3 from 'd3'
 import flatten from 'lodash/flatten'
@@ -36,17 +37,17 @@ class Scene extends Component {
 
       return genPath
     }
-    const normalize = draws => {
+    const normalize = (draws) => {
       const maxShapes = countMaxShapes(flatten(draws))
       const complete = completePath(center, maxShapes)
       const layersLength = draws.map(draw => draw.length).sort((a, b) => b - a)[0]
 
       return draws
         // add layouts
-        .map(draw => {
+        .map((draw) => {
           const newDraw = [...draw]
 
-          for (let i = 0; i < layersLengthds - draw.length; i += 1) {
+          for (let i = 0; i < layersLength - draw.length; i += 1) {
             newDraw.push('')
           }
 
@@ -79,11 +80,13 @@ class Scene extends Component {
 Scene.propTypes = {
   style: PropTypes.object,
   className: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  draws: MobxPropTypes.observableArray,
 }
 
 Scene.defaultProps = {
   style: {},
   className: '',
+  draws: undefined,
 }
 
 export default Scene

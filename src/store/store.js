@@ -112,9 +112,11 @@ export default () => {
     ],
   })
 
+  // eslint-disable-next-line no-console
   console.log('[store-init]', store.toJSON())
 
   onPatch(store, (data) => {
+    // eslint-disable-next-line no-console
     console.log('[store-patch]', data)
   })
 

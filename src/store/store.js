@@ -148,12 +148,12 @@ export default () => {
           '',
         ],
         choices: [
-          '/img/false.1.png',
-          '/img/false.2.png',
-          '/img/false.png',
-          '/img/true.png',
+          '/img/mongo-blue.png',
+          '/img/mongo-green.png',
+          '/img/mongo-orange.png',
+          '/img/mongo-pink.png',
         ],
-        goodChoice: '/img/true.png',
+        goodChoice: '/img/mongo-green.png',
       },
       {
         name: 'gitlab',

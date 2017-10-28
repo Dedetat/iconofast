@@ -10,16 +10,18 @@ const Button = ({
   onClick,
 }) => (
   <button
-    style={{ ...style, backgroundImage: `url(${choice})` }}
+    style={{ ...style, backgroundImage: `url(${choice.url})` }}
     className={`${styles.container} ${className}`}
     onClick={onClick}
+    disabled={choice.selected}
   />
 )
+
 
 Button.propTypes = {
   style: PropTypes.object,
   className: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-  choice: PropTypes.string,
+  choice: PropTypes.object,
   onClick: PropTypes.func,
 }
 

@@ -33,7 +33,9 @@ const Store = types
     verify: (choice) => {
       if (self.ended) return
 
-      if (self.current.goodChoice === choice) {
+      choice.setSelected()
+
+      if (self.current.goodChoice === choice.url) {
         self.computeScore()
 
         // we can pick next only if this is not the last draw

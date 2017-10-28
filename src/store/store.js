@@ -75,8 +75,8 @@ export default () => {
         choices: [
           '/img/vscode-blue.png',
           '/img/vscode-orange.png',
-          '/img/false.1.png',
-          '/img/false.png',
+          '/img/vscode-green.png',
+          '/img/vscode-pink.png',
         ],
         goodChoice: '/img/vscode-blue.png',
       },

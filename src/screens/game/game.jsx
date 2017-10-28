@@ -4,7 +4,7 @@ import Scene from '../../components/scene'
 import Choices from '../../components/choices'
 import Score from '../../components/score'
 
-const MainScreen = ({ style, className }) => (
+const Game = ({ style, className }) => (
   <div style={style} className={className}>
     <Scene />
 
@@ -13,14 +13,14 @@ const MainScreen = ({ style, className }) => (
   </div>
 )
 
-MainScreen.propTypes = {
+Game.propTypes = {
   style: PropTypes.object,
   className: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
 }
 
-MainScreen.defaultProps = {
+Game.defaultProps = {
   style: {},
   className: '',
 }
 
-export default MainScreen
+export default Game

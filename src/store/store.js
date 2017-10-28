@@ -10,14 +10,17 @@ const Store = types
     current: types.maybe(types.reference(Draw)),
     lastChange: types.maybe(types.number),
     draws: types.array(Draw),
+    picks: types.maybe(types.array(types.reference(Draw))),
     score: 0,
+    last: false,
+    ended: false,
   })
   .named('Store')
   .actions(self => ({
     afterCreate: () => {
-      self.current = self.currentDraw
-      self.previous = self.current
-      self.lastChange = Date.now()
+      self.picks = self.draws.map(draw => draw.name)
+
+      self.next()
     },
     computeScore: () => {
       const currentTime = Date.now()
@@ -28,21 +31,32 @@ const Store = types
       self.score += score
     },
     verify: (choice) => {
+      if (self.ended) return
+
       if (self.current.goodChoice === choice) {
         self.computeScore()
 
-        self.previous = self.current
-        self.current = self.currentDraw
-        self.current.shuffle()
-        self.lastChange = Date.now()
+        // we can pick next only if this is not the last draw
+        // if this is the last draw and verify is called, then the game is ended
+        if (!self.last) self.next()
+        else self.ended = true
       } else {
         self.score -= random(1000, 8000) * 2
       }
     },
-  }))
-  .views(self => ({
-    get currentDraw() {
-      return self.draws[random(0, self.draws.length - 1)]
+    next: () => {
+      if (self.ended) return
+
+      const next = self.picks[random(0, self.picks.length - 1)]
+
+      self.previous = self.current || next
+      self.current = next
+      self.current.shuffle()
+      self.lastChange = Date.now()
+
+      self.picks.remove(next)
+
+      if (self.picks.length === 0) self.last = true
     },
   }))
 

@@ -8,6 +8,7 @@ const Store = types
   .model({
     previous: types.maybe(types.reference(Draw)),
     current: types.maybe(types.reference(Draw)),
+    lastChange: types.maybe(types.number),
     draws: types.array(Draw),
     score: 0,
   })
@@ -16,14 +17,24 @@ const Store = types
     afterCreate: () => {
       self.current = self.currentDraw
       self.previous = self.current
+      self.lastChange = Date.now()
+    },
+    goodChoice: () => {
+      const currentTime = Date.now()
+      const elapsedTime = currentTime - self.lastChange
+
+      const score = Math.round(Math.max((10000000 / elapsedTime), 1000))
+
+      self.score += score
     },
     verify: (choice) => {
       if (self.current.goodChoice === choice) {
-        self.score += random(10000, 8000) // TODO : make the score based on time
+        self.goodChoice()
 
         self.previous = self.current
         self.current = self.currentDraw
         self.current.shuffle()
+        self.lastChange = Date.now()
       } else {
         self.score -= random(1000, 8000) * 2
       }

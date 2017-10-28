@@ -19,7 +19,7 @@ const Store = types
       self.previous = self.current
       self.lastChange = Date.now()
     },
-    goodChoice: () => {
+    computeScore: () => {
       const currentTime = Date.now()
       const elapsedTime = currentTime - self.lastChange
 
@@ -29,7 +29,7 @@ const Store = types
     },
     verify: (choice) => {
       if (self.current.goodChoice === choice) {
-        self.goodChoice()
+        self.computeScore()
 
         self.previous = self.current
         self.current = self.currentDraw

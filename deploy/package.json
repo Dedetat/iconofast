@@ -1,0 +1,13 @@
+{
+  "name": "iconofast",
+  "private": true,
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "serve -p ${PORT} build"
+  },
+  "dependencies": {
+    "serve": "^6.3.1"
+  }
+}

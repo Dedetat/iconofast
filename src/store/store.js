@@ -103,12 +103,12 @@ export default () => {
           '',
         ],
         choices: [
-          '/img/false.1.png',
-          '/img/false.2.png',
-          '/img/false.png',
-          '/img/true.png',
+          '/img/android-blue.png',
+          '/img/android-green.png',
+          '/img/android-orange.png',
+          '/img/android-pink.png',
         ],
-        goodChoice: '/img/true.png',
+        goodChoice: '/img/android-green.png',
       },
       {
         name: 'chromium',

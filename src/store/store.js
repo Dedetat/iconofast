@@ -34,7 +34,7 @@ const Store = types
 
       choice.setSelected()
 
-      if (self.current.goodChoice === choice.url) {
+      if (self.current.goodChoice === choice.style) {
         self.computeScore()
 
         // we can pick next only if this is not the last draw
@@ -76,12 +76,12 @@ export default () => {
           '',
         ],
         choices: [
-          '/img/vscode-blue.png',
-          '/img/vscode-orange.png',
-          '/img/false.1.png',
-          '/img/false.png',
+          '{ "backgroundColor": "#8300cf" }',
+          '{ "backgroundColor": "#0079cf" }',
+          '{ "backgroundColor": "#86cf00" }',
+          '{ "backgroundColor": "#cf9300" }',
         ],
-        goodChoice: '/img/vscode-blue.png',
+        goodChoice: '{ "backgroundColor": "#0079cf" }',
       },
       {
         name: 'mobx-state-tree',
@@ -91,12 +91,12 @@ export default () => {
           '',
         ],
         choices: [
-          '/img/false.1.png',
-          '/img/false.2.png',
-          '/img/false.png',
-          '/img/true.png',
+          '{ "backgroundColor": "#ff7100" }',
+          '{ "backgroundColor": "#8900ff" }',
+          '{ "backgroundColor": "#46ab16" }',
+          '{ "backgroundColor": "#165dab" }',
         ],
-        goodChoice: '/img/true.png',
+        goodChoice: '{ "backgroundColor": "#ff7100" }',
       },
       {
         name: 'android',
@@ -106,12 +106,12 @@ export default () => {
           '',
         ],
         choices: [
-          '/img/false.1.png',
-          '/img/false.2.png',
-          '/img/false.png',
-          '/img/true.png',
+          '{ "backgroundColor": "#99cc00" }',
+          '{ "backgroundColor": "#2c41ec" }',
+          '{ "backgroundColor": "#eccf2c" }',
+          '{ "backgroundColor": "#db2cec" }',
         ],
-        goodChoice: '/img/true.png',
+        goodChoice: '{ "backgroundColor": "#99cc00" }',
       },
       {
         name: 'chromium',
@@ -121,12 +121,12 @@ export default () => {
           'm252.14 160c-36.273-1.6114-69.775 23.966-83.004 56.887-8.4136 19.776-8.7765 42.597-1.1337 62.671 12.332 38.28 54.031 62.122 93.253 58.693 22.483-1.5726 43.318-13.498 58.374-29.88 30.543-34.719 28.512-94.019-6.7347-124.81-16.61-14.8-38.39-23.73-60.75-23.56z',
         ],
         choices: [
-          '/img/false.1.png',
-          '/img/false.2.png',
-          '/img/false.png',
-          '/img/true.png',
+          '{ "backgroundColor": "#8cb9e2" }',
+          '{ "backgroundColor": "#a4e28c" }',
+          '{ "backgroundColor": "#e2918c" }',
+          '{ "backgroundColor": "#e28ce2" }',
         ],
-        goodChoice: '/img/true.png',
+        goodChoice: '{ "backgroundColor": "#8cb9e2" }',
       },
       {
         name: 'kotlin',
@@ -136,12 +136,12 @@ export default () => {
           '',
         ],
         choices: [
-          '/img/false.1.png',
-          '/img/false.2.png',
-          '/img/false.png',
-          '/img/true.png',
+          '{ "background": "linear-gradient(to bottom right, #6775e0, #6775e0, #f88909, #6775e0, #6775e0)" }',
+          '{ "background": "linear-gradient(to bottom right, #67e076, #67e076, #6775e0, #67e076, #67e076)" }',
+          '{ "background": "linear-gradient(to bottom right, #f88909, #f88909, #6775e0, #f88909, #f88909)" }',
+          '{ "background": "linear-gradient(to bottom right, #6775e0, #6775e0, #67e076, #6775e0, #6775e0)" }',
         ],
-        goodChoice: '/img/true.png',
+        goodChoice: '{ "background": "linear-gradient(to bottom right, #6775e0, #6775e0, #f88909, #6775e0, #6775e0)" }',
       },
       {
         name: 'mongo',
@@ -151,12 +151,12 @@ export default () => {
           '',
         ],
         choices: [
-          '/img/false.1.png',
-          '/img/false.2.png',
-          '/img/false.png',
-          '/img/true.png',
+          '{ "backgroundColor": "#599736" }',
+          '{ "backgroundColor": "#d2a826" }',
+          '{ "backgroundColor": "#d4416e" }',
+          '{ "backgroundColor": "#4143d4" }',
         ],
-        goodChoice: '/img/true.png',
+        goodChoice: '{ "backgroundColor": "#599736" }',
       },
       {
         name: 'gitlab',
@@ -166,12 +166,12 @@ export default () => {
           '',
         ],
         choices: [
-          '/img/false.1.png',
-          '/img/false.2.png',
-          '/img/false.png',
-          '/img/true.png',
+          '{ "backgroundColor": "#e2432a" }',
+          '{ "backgroundColor": "#189646" }',
+          '{ "backgroundColor": "#455ace" }',
+          '{ "backgroundColor": "#ad1fc3" }',
         ],
-        goodChoice: '/img/true.png',
+        goodChoice: '{ "backgroundColor": "#e2432a" }',
       },
       {
         name: 'redis',
@@ -181,12 +181,12 @@ export default () => {
           '',
         ],
         choices: [
-          '/img/false.1.png',
-          '/img/false.2.png',
-          '/img/false.png',
-          '/img/true.png',
+          '{ "backgroundColor": "#d82c20" }',
+          '{ "backgroundColor": "#20d842" }',
+          '{ "backgroundColor": "#204dd8" }',
+          '{ "backgroundColor": "#d820ad" }',
         ],
-        goodChoice: '/img/true.png',
+        goodChoice: '{ "backgroundColor": "#d82c20" }',
       },
     ],
   })

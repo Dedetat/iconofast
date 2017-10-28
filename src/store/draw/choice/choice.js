@@ -5,7 +5,7 @@ import { types } from 'mobx-state-tree'
 export default types
   .model({
     selected: false,
-    url: types.string,
+    style: types.string,
   })
   .named('Choice')
   .actions(self => ({

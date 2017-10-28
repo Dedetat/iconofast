@@ -19,5 +19,5 @@ export default types
   }))
   .preProcessSnapshot(({ choices, ...rest }) => ({
     ...rest,
-    choices: choices.map(choice => ({ url: choice })),
+    choices: choices.map(choice => ({ style: choice })),
   }))

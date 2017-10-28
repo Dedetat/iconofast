@@ -1,14 +1,45 @@
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-// import styles from './Gameover.styles'
+// import styles from './gameover.styles'
 
-const Gameover = ({ style, className, score }) => (
-  <div style={style} className={className}>
-    Well played, you did a {score} score !
+const numberFormat = new Intl.NumberFormat('en')
 
-    Tweet about it : TODO
-  </div>
-)
+class Gameover extends Component {
+  tweetMount = (elm) => {
+    const text =
+`I scored ✨ ${numberFormat.format(this.props.score)} ✨ on #iconofast : ${window.location.href} !
+Can you beat me ? 💪
+-
+@MilletDelphine / @fabienjuif
+at @bdxio #bdxio`
+
+    const attach = () => {
+      if (!window.twttr || !window.twttr.widgets) {
+        window.requestAnimationFrame(attach)
+      } else {
+        window.twttr.widgets.createShareButton(
+          '/',
+          elm,
+          { text },
+        )
+      }
+    }
+
+    attach()
+  }
+
+  render() {
+    const { style, className, score } = this.props
+
+    return (
+      <div style={style} className={className}>
+        Well played, you did a {numberFormat.format(score)} score !
+
+        Feel free to tweet about it : <div ref={this.tweetMount} />
+      </div>
+    )
+  }
+}
 
 Gameover.propTypes = {
   style: PropTypes.object,

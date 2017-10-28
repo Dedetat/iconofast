@@ -118,12 +118,12 @@ export default () => {
           'm252.14 160c-36.273-1.6114-69.775 23.966-83.004 56.887-8.4136 19.776-8.7765 42.597-1.1337 62.671 12.332 38.28 54.031 62.122 93.253 58.693 22.483-1.5726 43.318-13.498 58.374-29.88 30.543-34.719 28.512-94.019-6.7347-124.81-16.61-14.8-38.39-23.73-60.75-23.56z',
         ],
         choices: [
-          '/img/false.1.png',
-          '/img/false.2.png',
-          '/img/false.png',
-          '/img/true.png',
+          '/img/chromium-blue.png',
+          '/img/chromium-green.png',
+          '/img/chromium-orange.png',
+          '/img/chromium-pink.png',
         ],
-        goodChoice: '/img/true.png',
+        goodChoice: '/img/chromium-blue.png',
       },
       {
         name: 'kotlin',

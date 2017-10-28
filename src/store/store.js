@@ -20,6 +20,8 @@ const Store = types
         self.score += random(10000, 8000) // TODO : make the score based on time
         self.current = self.draws[random(self.draws.length - 1, 0)]
         self.current.shuffle()
+      } else {
+        self.score -= random(1000, 8000) * 2
       }
     },
   }))

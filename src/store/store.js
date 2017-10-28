@@ -6,7 +6,7 @@ import Draw from './draw'
 
 const Store = types
   .model({
-    old: types.maybe(types.reference(Draw)),
+    previous: types.maybe(types.reference(Draw)),
     current: types.maybe(types.reference(Draw)),
     draws: types.array(Draw),
     score: 0,
@@ -15,13 +15,13 @@ const Store = types
   .actions(self => ({
     afterCreate: () => {
       self.current = self.draws[random(self.draws.length - 1, 0)]
-      self.old = self.current
+      self.previous = self.current
     },
     verify: (choice) => {
       if (self.current.goodChoice === choice) {
         self.score += random(10000, 8000) // TODO : make the score based on time
 
-        self.old = self.current
+        self.previous = self.current
         self.current = self.draws[random(self.draws.length - 1, 0)]
         self.current.shuffle()
       }

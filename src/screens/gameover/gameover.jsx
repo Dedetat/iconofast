@@ -2,9 +2,16 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 // import styles from './gameover.styles'
 
+const numberFormat = new Intl.NumberFormat('en')
+
 class Gameover extends Component {
   tweetMount = (elm) => {
-    const text = `I scored ${this.props.score} on #iconofast, the flubber game created by @milletdelphine and @fabienjuif\n\n- cc @bdxio #bdxio`
+    const text =
+`I scored ✨ ${numberFormat.format(this.props.score)} ✨ on #iconofast : ${window.location.href} !
+Can you beat me ? 💪
+-
+@MilletDelphine / @fabienjuif
+at @bdxio #bdxio`
 
     const attach = () => {
       if (!window.twttr || !window.twttr.widgets) {
@@ -26,7 +33,7 @@ class Gameover extends Component {
 
     return (
       <div style={style} className={className}>
-        Well played, you did a {score} score !
+        Well played, you did a {numberFormat.format(score)} score !
 
         Feel free to tweet about it : <div ref={this.tweetMount} />
       </div>

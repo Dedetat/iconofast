@@ -10,7 +10,7 @@ const Button = ({
   onClick,
 }) => (
   <button
-    style={{ ...style, backgroundImage: `url(${choice.url})` }}
+    style={{ ...style, ...JSON.parse(choice.style) }}
     className={`${styles.container} ${className}`}
     onClick={onClick}
     disabled={choice.selected}

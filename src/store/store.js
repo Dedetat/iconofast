@@ -88,12 +88,12 @@ export default () => {
           '',
         ],
         choices: [
-          '/img/false.1.png',
-          '/img/false.2.png',
-          '/img/false.png',
-          '/img/true.png',
+          '/img/mst-pink.png',
+          '/img/mst-blue.png',
+          '/img/mst-green.png',
+          '/img/mst-orange.png',
         ],
-        goodChoice: '/img/true.png',
+        goodChoice: '/img/mst-orange.png',
       },
       {
         name: 'android',

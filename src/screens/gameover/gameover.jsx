@@ -36,6 +36,8 @@ at @bdxio #bdxio`
         Well played, you did a {numberFormat.format(score)} score !
 
         Feel free to tweet about it : <div ref={this.tweetMount} />
+
+        <button onClick={() => { window.location.reload() }}>Retry</button>
       </div>
     )
   }

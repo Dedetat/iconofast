@@ -178,12 +178,12 @@ export default () => {
           '',
         ],
         choices: [
-          '/img/false.1.png',
-          '/img/false.2.png',
-          '/img/false.png',
-          '/img/true.png',
+          '/img/redis-blue.png',
+          '/img/redis-green.png',
+          '/img/redis-pink.png',
+          '/img/redis-red.png',
         ],
-        goodChoice: '/img/true.png',
+        goodChoice: '/img/redis-red.png',
       },
     ],
   })

@@ -14,13 +14,12 @@ const Store = types
     score: 0,
     last: false,
     ended: false,
+    started: false,
   })
   .named('Store')
   .actions(self => ({
     afterCreate: () => {
       self.picks = self.draws.map(draw => draw.name)
-
-      self.next()
     },
     computeScore: () => {
       const currentTime = Date.now()
@@ -59,6 +58,10 @@ const Store = types
       self.picks.remove(next)
 
       if (self.picks.length === 0) self.last = true
+    },
+    start: () => {
+      self.started = true
+      self.next()
     },
   }))
 

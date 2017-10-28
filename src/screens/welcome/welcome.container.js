@@ -1,7 +1,6 @@
 import { inject } from 'mobx-react'
-import Component from './router'
+import Component from './welcome'
 
 export default inject(({ store }) => ({
-  ended: store.ended,
-  started: store.started,
+  start: store.start,
 }))(Component)

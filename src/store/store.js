@@ -8,6 +8,7 @@ const Store = types
   .model({
     previous: types.maybe(types.reference(Draw)),
     current: types.maybe(types.reference(Draw)),
+    lastChange: types.maybe(types.number),
     draws: types.array(Draw),
     picks: types.maybe(types.array(types.reference(Draw))),
     score: 0,
@@ -21,13 +22,21 @@ const Store = types
 
       self.next()
     },
+    computeScore: () => {
+      const currentTime = Date.now()
+      const elapsedTime = currentTime - self.lastChange
+
+      const score = Math.round(Math.max((10000000 / elapsedTime), 1000))
+
+      self.score += score
+    },
     verify: (choice) => {
       if (self.ended) return
 
       choice.setSelected()
 
       if (self.current.goodChoice === choice.url) {
-        self.score += random(10000, 8000) // TODO : make the score based on time
+        self.computeScore()
 
         // we can pick next only if this is not the last draw
         // if this is the last draw and verify is called, then the game is ended
@@ -45,6 +54,7 @@ const Store = types
       self.previous = self.current || next
       self.current = next
       self.current.shuffle()
+      self.lastChange = Date.now()
 
       self.picks.remove(next)
 

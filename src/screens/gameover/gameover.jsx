@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 const Gameover = ({ style, className, score }) => (
   <div style={style} className={className}>
-    Well player, you did a {score} score !
+    Well played, you did a {score} score !
 
     Tweet about it : TODO
   </div>

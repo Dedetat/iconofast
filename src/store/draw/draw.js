@@ -1,6 +1,6 @@
 import { types } from 'mobx-state-tree'
 import shuffle from 'lodash/shuffle'
-import Choice from '../choice'
+import Choice from './choice'
 
 /* eslint-disable no-param-reassign */
 
@@ -17,14 +17,7 @@ export default types
       self.choices = shuffle(self.choices.peek())
     },
   }))
-  .preProcessSnapshot(({
-    name,
-    layers,
-    choices,
-    goodChoice,
-  }) => ({
-    name,
-    layers,
-    choices: choices.map(choice => ({ url: choice, selected: false })),
-    goodChoice,
+  .preProcessSnapshot(({ choices, ...rest }) => ({
+    ...rest,
+    choices: choices.map(choice => ({ url: choice })),
   }))

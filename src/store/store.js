@@ -13,14 +13,19 @@ const Store = types
   .named('Store')
   .actions(self => ({
     afterCreate: () => {
-      self.current = self.draws[random(self.draws.length - 1, 0)]
+      self.current = self.currentDraw
     },
     verify: (choice) => {
       if (self.current.goodChoice === choice) {
         self.score += random(10000, 8000) // TODO : make the score based on time
-        self.current = self.draws[random(self.draws.length - 1, 0)]
+        self.current = self.currentDraw
         self.current.shuffle()
       }
+    },
+  }))
+  .views(self => ({
+    get currentDraw() {
+      return self.draws[random(0, self.draws.length - 1)]
     },
   }))
 

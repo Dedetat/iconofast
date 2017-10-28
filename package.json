@@ -12,7 +12,7 @@
     "lint:js": "eslint --ext js,jsx src",
     "lint": "npm-run-all --parallel lint:*",
     "ci": "npm-run-all --parallel lint",
-    "deploy": "npm run build && git add deploy && git commit -m 'build to deploy' && git push heroku $(git subtree split --prefix deploy deploy):refs/heads/master --force && rimraf -f deploy/build"
+    "deploy": "npm run build && git add deploy && git commit -m 'build to deploy' && git push heroku $(git subtree split --prefix deploy master):refs/heads/master --force && rimraf -f deploy/build"
   },
   "dependencies": {
     "d3": "^4.11.0",

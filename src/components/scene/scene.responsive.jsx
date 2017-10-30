@@ -44,6 +44,10 @@ export default () => WrappedComponent => class extends Component {
       marginTop: `calc((100vh - 35vh - 2.4em - ${svgHeight}px) / 2)`,
     }
 
+    if (scale >= 1) {
+      ownStyle.margin = '0 auto'
+    }
+
     return <WrappedComponent {...this.props} style={ownStyle} />
   }
 }

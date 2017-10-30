@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-// import styles from './score.styles'
+import styles from './score.styles'
 
 const Score = ({ style, className, score }) => (
-  <div style={style} className={className}>
-    {score}
+  <div style={style} className={`${styles.container} ${className}`}>
+    ✨ {score} ✨
   </div>
 )
 

@@ -6,10 +6,9 @@ import Score from '../../components/score'
 
 const Game = ({ style, className }) => (
   <div style={style} className={className}>
-    <Scene />
-
-    <Choices />
     <Score />
+    <Scene />
+    <Choices />
   </div>
 )
 

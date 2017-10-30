@@ -4,6 +4,7 @@ import { observer, PropTypes as MobxPropTypes } from 'mobx-react'
 import { interpolateAll, splitPathString } from 'flubber'
 import * as d3 from 'd3'
 import flatten from 'lodash/flatten'
+import styles from './scene.styles'
 
 const animate = (sel, { previous, current }) => {
   const interpolator = interpolateAll(previous, current, { single: true, maxSegmentLength: 5 })
@@ -65,7 +66,7 @@ class Scene extends Component {
     const { style, className } = this.props
 
     return (
-      <svg style={style} className={className} width={500} height={500}>
+      <svg style={style} className={`${styles.container} ${className}`} width={500} height={500}>
         <path ref={this.attach(0)} fill="black" />
         <path ref={this.attach(1)} fill="white" />
         <path ref={this.attach(2)} fill="black" />

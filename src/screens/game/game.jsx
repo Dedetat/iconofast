@@ -3,13 +3,13 @@ import PropTypes from 'prop-types'
 import Scene from '../../components/scene'
 import Choices from '../../components/choices'
 import Score from '../../components/score'
+import styles from './game.styles'
 
 const Game = ({ style, className }) => (
-  <div style={style} className={className}>
-    <Scene />
-
-    <Choices />
+  <div style={style} className={`${styles.container} ${className}`}>
     <Score />
+    <Scene />
+    <Choices />
   </div>
 )
 

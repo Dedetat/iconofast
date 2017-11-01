@@ -54,6 +54,7 @@
       "import/no-extraneous-dependencies": "off",
       "react/forbid-prop-types": "off",
       "react/no-typos": "off",
+      "jsx-a11y/accessible-emoji": "off",
       "semi": [
         2,
         "never"

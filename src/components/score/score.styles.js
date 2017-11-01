@@ -4,8 +4,21 @@ const container = css({
   fontSize: '2em',
   margin: '.2em',
   textAlign: 'center',
+  transition: 'transform 500ms, color 500ms',
+  zIndex: '100',
+})
+
+const animateBonus = css({
+  transform: 'translateY(1em) scale(2)',
+})
+
+const animateMalus = css({
+  transform: 'scale(0.5)',
+  color: 'red',
 })
 
 export default {
   container,
+  animateBonus,
+  animateMalus,
 }

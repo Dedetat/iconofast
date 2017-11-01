@@ -44,12 +44,12 @@ at @bdxio #bdxio`
             score!
           </h2>
           <div>Feel free to tweet about it</div>
-          <div className={styles.actions}>
-            <button className={styles.retry} onClick={() => { window.location.reload() }}>
-              Retry
-            </button>
-            <div ref={this.tweetMount} className={styles.twitter} />
-          </div>
+        </div>
+        <div className={styles.actions}>
+          <button className={styles.retry} onClick={() => { window.location.reload() }}>
+            Retry
+          </button>
+          <div ref={this.tweetMount} className={styles.twitter} />
         </div>
       </div>
     )

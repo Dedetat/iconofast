@@ -14,12 +14,13 @@ const score = css({
 const actions = css({
   display: 'flex',
   justifyContent: 'center',
-  margin: '2vh auto',
+  transform: 'scale(1.5)',
+  margin: '5vw auto',
 })
 
 const twitter = css({
   height: '28px',
-  margin: '1vh',
+  margin: 'auto 1vh',
   display: 'flex',
 })
 
@@ -31,7 +32,7 @@ const retry = css({
   borderRadius: '4px',
   fontFamily: '"Helvetica Neue", Arial, sans-serif',
   color: '#777777',
-  margin: '1vh',
+  margin: 'auto 1vh',
   textTransform: 'uppercase',
   fontWeight: 600,
   fontSize: '13px',

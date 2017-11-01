@@ -37,7 +37,7 @@ const retry = css({
   fontSize: '13px',
   '&:hover': {
     background: '#c1c1c1',
-  }
+  },
 })
 
 export default {

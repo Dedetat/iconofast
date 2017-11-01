@@ -22,7 +22,7 @@ at @bdxio #bdxio`
           elm,
           {
             size: 'large',
-            text
+            text,
           },
         )
       }
@@ -39,11 +39,15 @@ at @bdxio #bdxio`
         <div className="text">
           <span role="img" aria-label="tada" className={styles.emoji}>🎉</span>
           <h2>
-            Well played, you did a <span className={styles.score}>{numberFormat.format(score)}</span> score!
+            Well played, you did a
+            <span className={styles.score}>&nbsp;{numberFormat.format(score)}&nbsp;</span>
+            score!
           </h2>
           <div>Feel free to tweet about it</div>
           <div className={styles.actions}>
-            <button className={styles.retry} onClick={() => { window.location.reload() }}>Retry</button>
+            <button className={styles.retry} onClick={() => { window.location.reload() }}>
+              Retry
+            </button>
             <div ref={this.tweetMount} className={styles.twitter} />
           </div>
         </div>

@@ -12,10 +12,10 @@ const container = css({
     boxShadow: '0px 0px 30px -5px black',
   },
   '&:disabled': {
-    opacity: .5,
+    opacity: '.5',
     cursor: 'auto',
     boxShadow: 'inherit',
-  }
+  },
 })
 
 export default {

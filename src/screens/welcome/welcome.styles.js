@@ -43,7 +43,7 @@ const button = css({
   outline: 'none',
   '&:hover': {
     backgroundColor: '#1976d2',
-  }
+  },
 })
 
 export default {

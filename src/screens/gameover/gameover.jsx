@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-// import styles from './gameover.styles'
+import Github from '../../components/github'
+import styles from './gameover.styles'
 
 const numberFormat = new Intl.NumberFormat('en')
 
@@ -20,7 +21,10 @@ at @bdxio #bdxio`
         window.twttr.widgets.createShareButton(
           '/',
           elm,
-          { text },
+          {
+            size: 'large',
+            text,
+          },
         )
       }
     }
@@ -32,12 +36,24 @@ at @bdxio #bdxio`
     const { style, className, score } = this.props
 
     return (
-      <div style={style} className={className}>
-        Well played, you did a {numberFormat.format(score)} score !
-
-        Feel free to tweet about it : <div ref={this.tweetMount} />
-
-        <button onClick={() => { window.location.reload() }}>Retry</button>
+      <div style={style} className={`container ${className}`}>
+        <div className="text">
+          <span role="img" aria-label="tada" className={styles.emoji}>🎉</span>
+          <h2>
+            Well played, you did a
+            <span className={styles.score}>&nbsp;{numberFormat.format(score)}&nbsp;</span>
+            score!
+          </h2>
+          <div>Feel free to tweet about it</div>
+          <div>or contribute on Github</div>
+          <Github />
+        </div>
+        <div className={styles.actions}>
+          <button className={styles.retry} onClick={() => { window.location.reload() }}>
+            Retry
+          </button>
+          <div ref={this.tweetMount} className={styles.twitter} />
+        </div>
       </div>
     )
   }

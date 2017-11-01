@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import Github from '../../components/github'
 import styles from './gameover.styles'
 
 const numberFormat = new Intl.NumberFormat('en')
@@ -44,6 +45,8 @@ at @bdxio #bdxio`
             score!
           </h2>
           <div>Feel free to tweet about it</div>
+          <div>or contribute on Github</div>
+          <Github />
         </div>
         <div className={styles.actions}>
           <button className={styles.retry} onClick={() => { window.location.reload() }}>

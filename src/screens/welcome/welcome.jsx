@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Github from '../../components/github'
 import styles from './welcome.styles'
 
 const Welcome = ({ style, className, start }) => (
@@ -16,7 +17,7 @@ const Welcome = ({ style, className, start }) => (
         &nbsp;&&nbsp;
         <a href="https://twitter.com/MilletDelphine">@MilletDelphine</a>
       </div>
-      <span role="img" aria-label="heart">💛</span>
+      <Github />
     </div>
 
     <div className="text">

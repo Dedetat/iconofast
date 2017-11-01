@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { Howl } from 'howler'
 import styles from './score.styles'
 
 export default () => (WrappedComponent) => {
@@ -10,6 +11,14 @@ export default () => (WrappedComponent) => {
       this.state = {
         className: '',
       }
+
+      this.sound = new Howl({
+        src: ['/sounds.ogg'],
+        sprite: {
+          bonus: [855, 1352],
+          malus: [0, 565],
+        },
+      })
     }
 
     componentWillReceiveProps(nextProps) {
@@ -24,12 +33,12 @@ export default () => (WrappedComponent) => {
     }
 
     setBonus = () => {
-      // TODO: bonus sound
+      this.sound.play('bonus')
       this.setClassName(styles.animateBonus)
     }
 
     setMalus = () => {
-      // TODO: malus sound
+      this.sound.play('malus')
       this.setClassName(styles.animateMalus)
     }
 

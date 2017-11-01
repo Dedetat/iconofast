@@ -25,7 +25,7 @@ const titlePart3 = css({
 })
 
 const button = css({
-  margin: '5vw auto',
+  margin: '7vh auto',
   padding: '2em 10em',
   borderStyle: 'none',
   borderRadius: '.2em',
@@ -38,7 +38,6 @@ const button = css({
   fontSize: '.8em',
   transition: 'background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms',
   lineHeight: '50%',
-  fontWeight: 600,
   cursor: 'pointer',
   outline: 'none',
   '&:hover': {

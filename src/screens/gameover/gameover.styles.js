@@ -15,7 +15,7 @@ const actions = css({
   display: 'flex',
   justifyContent: 'center',
   transform: 'scale(1.5)',
-  margin: '5vw auto',
+  margin: '7vh auto',
 })
 
 const twitter = css({
@@ -34,7 +34,6 @@ const retry = css({
   color: '#777777',
   margin: 'auto 1vh',
   textTransform: 'uppercase',
-  fontWeight: 600,
   fontSize: '13px',
   '&:hover': {
     background: '#c1c1c1',

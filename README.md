@@ -5,7 +5,7 @@
 # Iconofast
 Welcome to our source speech repository about [flubber](https://github.com/veltman/flubber)!
 
- - All informations are in the README 👌
+ - All the information is in the README 👌
  - Source code of our livecoding is described here too ! 📖
  - Feel free to open issues / PR 🤗
 

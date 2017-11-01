@@ -24,8 +24,26 @@ const titlePart3 = css({
   color: '#db3236',
 })
 
-const question = css({
-  fontSize: '8vw',
+const button = css({
+  margin: '5vw auto',
+  padding: '2em 10em',
+  borderStyle: 'none',
+  borderRadius: '.2em',
+  textTransform: 'uppercase',
+  boxShadow: '0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12)',
+  color: '#ffffff',
+  backgroundColor: '#4885ed',
+  minWidth: '10vw',
+  minHeight: '5vh',
+  fontSize: '.8em',
+  transition: 'background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms',
+  lineHeight: '50%',
+  fontWeight: 600,
+  cursor: 'pointer',
+  outline: 'none',
+  '&:hover': {
+    backgroundColor: '#1976d2',
+  }
 })
 
 export default {
@@ -34,5 +52,5 @@ export default {
   titlePart1,
   titlePart2,
   titlePart3,
-  question,
+  button,
 }

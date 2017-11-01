@@ -20,7 +20,10 @@ at @bdxio #bdxio`
         window.twttr.widgets.createShareButton(
           '/',
           elm,
-          { text },
+          {
+            size: 'large',
+            text
+          },
         )
       }
     }
@@ -34,16 +37,16 @@ at @bdxio #bdxio`
     return (
       <div style={style} className={`container ${className}`}>
         <div className="text">
-          <span role="img" aria-label="tada" className="emoji">🎉</span>
-          <h2 className={styles.congrat}>
-            Well played, you did a&nbsp;
-            <span className={styles.score}>{numberFormat.format(score)}</span> score !
+          <span role="img" aria-label="tada" className={styles.emoji}>🎉</span>
+          <h2>
+            Well played, you did a <span className={styles.score}>{numberFormat.format(score)}</span> score!
           </h2>
-          <div>Feel free to tweet about it
+          <div>Feel free to tweet about it</div>
+          <div className={styles.actions}>
+            <button className={styles.retry} onClick={() => { window.location.reload() }}>Retry</button>
             <div ref={this.tweetMount} className={styles.twitter} />
           </div>
         </div>
-        <button onClick={() => { window.location.reload() }}>Retry</button>
       </div>
     )
   }

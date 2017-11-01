@@ -20,13 +20,13 @@ const Welcome = ({ style, className, start }) => (
     </div>
 
     <div className="text">
-      <h2 className={styles.question}>Do you think you know every tech logo ?</h2>
+      <h2>Do you think you know every tech logo?</h2>
       <div>
-        Find the right color for each logo as fast as possible and try to get the highest score !
+        Find the right color for each logo as fast as possible and try to get the highest score!
       </div>
     </div>
 
-    <button onClick={start}>Start</button>
+    <button onClick={start} className={styles.button}>Start</button>
   </div>
 )
 

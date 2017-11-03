@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import styles from './scene.styles'
 
 export default () => WrappedComponent => class extends Component {
   constructor(props, context) {
@@ -20,16 +21,14 @@ export default () => WrappedComponent => class extends Component {
     // .8 means 80vw (10 vw for left and right margins)
     // 500 is svg width in pixels
     const scale = (width * 0.8) / 500
-    const svgHeight = scale * 500
 
     // eslint-disable-next-line react/no-did-mount-set-state
-    this.setState(state => ({ ...state, scale, svgHeight }))
+    this.setState(state => ({ ...state, scale }))
   }
 
   render() {
     const {
       scale,
-      svgHeight,
     } = this.state
     const {
       style = {}, // eslint-disable-line react/prop-types
@@ -38,16 +37,16 @@ export default () => WrappedComponent => class extends Component {
     const ownStyle = {
       ...style,
       transform: `scale(${scale})`,
-      transformOrigin: 'top left',
-      // 35vh is for actions (rounded)
-      // 2.4em is for score and its margin (2 * .2em margins)
-      marginTop: `calc((100vh - 35vh - 2.4em - ${svgHeight}px) / 2)`,
     }
 
     if (scale >= 1) {
       ownStyle.margin = '0 auto'
     }
 
-    return <WrappedComponent {...this.props} style={ownStyle} />
+    return (
+      <div className={styles.responsive}>
+        <WrappedComponent {...this.props} style={ownStyle} />
+      </div>
+    )
   }
 }

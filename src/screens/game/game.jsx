@@ -6,7 +6,7 @@ import Score from '../../components/score'
 import styles from './game.styles'
 
 const Game = ({ style, className }) => (
-  <div style={style} className={`${styles.container} ${className}`}>
+  <div style={style} className={`container ${styles.container} ${className}`}>
     <Score />
     <Scene />
     <Choices />

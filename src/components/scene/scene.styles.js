@@ -5,12 +5,11 @@ const container = css({
 })
 
 const responsive = css({
-  position: 'absolute',
-  height: '60%',
+  height: '55%',
   display: 'flex',
-  marginTop: '10%',
   justifyContent: 'center',
   alignItems: 'center',
+  marginBottom: 'auto',
 })
 
 export default {

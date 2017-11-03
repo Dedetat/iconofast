@@ -12,15 +12,15 @@ export default () => WrappedComponent => class extends Component {
 
   componentDidMount() {
     const {
+      height,
       width,
     } = window.screen
 
     // width is large enough
     if (width > 500) return
 
-    // .8 means 80vw (10 vw for left and right margins)
     // 500 is svg width in pixels
-    const scale = (width * 0.8) / 500
+    const scale = (height * 0.4) / 500
 
     // eslint-disable-next-line react/no-did-mount-set-state
     this.setState(state => ({ ...state, scale }))

@@ -9,7 +9,8 @@ const container = css({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  height: '2em',
+  maxHeight: '2em',
+  height: '10%',
 })
 
 const animateBonus = css({

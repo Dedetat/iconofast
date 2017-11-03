@@ -6,9 +6,11 @@ const container = css({
 
 const responsive = css({
   position: 'absolute',
-  height: '70%',
+  height: '60%',
   display: 'flex',
-  alignItems: 'flex-start',
+  marginTop: '10%',
+  justifyContent: 'center',
+  alignItems: 'center',
 })
 
 export default {

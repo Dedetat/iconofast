@@ -32,6 +32,7 @@ const retry = css({
   borderRadius: '4px',
   fontFamily: '"Helvetica Neue", Arial, sans-serif',
   color: '#777777',
+  background: '#dddddd',
   margin: 'auto 1vh',
   textTransform: 'uppercase',
   fontSize: '13px',

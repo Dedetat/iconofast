@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <style>
+    body {
+      margin: 0;
+      padding: 10em 10em;
+      background-color: #9fcaea;
+    }
+
+    path {
+      fill: white;
+      stroke-width: 0;
+    }
+  </style>
+</head>
+<body>
+<svg width="960" height="500">
+  <path d="M30,110A80,80,0,1,1,190,110A80,80,0,1,1,30,110Z" />
+</svg>
+<script src="/node_modules/d3/build/d3.min.js"></script>
+<script src="https://d3js.org/topojson.v3.min.js"></script>
+<script src="/node_modules/flubber/build/flubber.min.js"></script>
+<script>
+const svg = d3.select('svg')
+const path = svg.select('path')
+const options = { maxSegmentLength: 1 }
+
+const animate = () => {
+  path
+    .transition()
+    .delay(500)
+    .duration(1000)
+    .attrTween("d", () => flubber.toRect(svg.select('path').attr('d'), 10, 10, 200, 200, options))
+    .transition()
+    .delay(500)
+    .attrTween("d", () => flubber.toCircle(svg.select('path').attr('d'), 110, 110, 80, options))
+    .on('end', () => { animate() })
+}
+
+animate()
+</script>

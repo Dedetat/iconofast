@@ -35,6 +35,9 @@ const animate = () => {
     .attrTween("d", () => flubber.toRect(svg.select('path').attr('d'), 10, 10, 200, 200, options))
     .transition()
     .delay(500)
+    .attrTween("d", () => flubber.toRect(svg.select('path').attr('d'), 200, 200, 200, 50, options))
+    .transition()
+    .delay(500)
     .attrTween("d", () => flubber.toCircle(svg.select('path').attr('d'), 110, 110, 80, options))
     .on('end', () => { animate() })
 }

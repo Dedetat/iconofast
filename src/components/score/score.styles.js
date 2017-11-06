@@ -6,6 +6,11 @@ const container = css({
   textAlign: 'center',
   transition: 'transform 500ms, color 500ms',
   zIndex: '100',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  maxHeight: '2em',
+  height: '10%',
 })
 
 const animateBonus = css({

@@ -1,9 +1,18 @@
 import { css } from 'glamor'
 
 const container = css({
-  marginLeft: '10vw',
+  margin: '0',
+})
+
+const responsive = css({
+  height: '55%',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  marginBottom: 'auto',
 })
 
 export default {
   container,
+  responsive,
 }

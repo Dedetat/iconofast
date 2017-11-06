@@ -9,6 +9,10 @@ body {
   font-family: 'Roboto Regular', sans-serif;
 }
 
+#root {
+  height: 100%;
+}
+
 a {
   text-decoration: none;
   font-weight: bold;
@@ -39,7 +43,6 @@ a {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
 }
-

@@ -196,9 +196,9 @@ export default () => {
           '',
         ],
         choices: [
-          '{ "backgroundColor": "#d82c20" }',
-          '{ "backgroundColor": "#20d842" }',
-          '{ "backgroundColor": "#204dd8" }',
+          '{ "backgroundColor": "#3b56ab" }',
+          '{ "backgroundColor": "#409650" }',
+          '{ "backgroundColor": "#c3c04c" }',
           '{ "backgroundColor": "#99425b" }',
         ],
         goodChoice: '{ "backgroundColor": "#99425b" }',

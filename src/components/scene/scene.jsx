@@ -48,7 +48,7 @@ class Scene extends Component {
 
     return (
       <svg style={style} className={className} width={500} height={500}>
-        <path ref={this.attach(0)} fill="blak" />
+        <path ref={this.attach(0)} fill="black" />
         <path ref={this.attach(1)} fill="#9fcaea" />
         <path ref={this.attach(2)} fill="black" />
       </svg>

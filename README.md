@@ -1,5 +1,8 @@
+
 <p align="center">
-  TODO: screencapture of the game
+  <img src="https://i.imgur.com/wizjyqV.png" width="150px" />
+  <img src="https://i.imgur.com/Casa7qQ.png" width="150px" />
+  <img src="https://i.imgur.com/lKpUQis.png" width="150px" />
 </p>
 
 # Iconofast

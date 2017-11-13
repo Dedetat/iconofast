@@ -19,7 +19,7 @@ Welcome to our source speech repository about [flubber](https://github.com/veltm
  - Soon
 
 ## Videos
- - [BDX.io Bordeaux, France - 2017](https://youtu.be/yldzlHIBWfY?t=13226)
+ - [BDX.io Bordeaux, France - 2017 -fr-](https://youtu.be/yldzlHIBWfY?t=13226)
 
 ## Events
  - [BDX.io Bordeaux, France - 2017](https://www.bdx.io/#/)

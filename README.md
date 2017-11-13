@@ -27,5 +27,12 @@ Welcome to our source speech repository about [flubber](https://github.com/veltm
 ## Events
  - [BDX.io Bordeaux, France - 2017](https://www.bdx.io/#/)
 
-## Livecoding
- - Soon
+## Code samples
+ - [Circle to square](https://github.com/Dedetat/iconofast/blob/flubber/index.html)
+ - [Circle to square to rect](https://github.com/Dedetat/iconofast/blob/rect-to-rect/index.html)
+ - [It blinks !](https://github.com/Dedetat/iconofast/blob/demo-before-layers/src/components/scene/scene.jsx)
+ - Layers
+   * [Layers](https://github.com/Dedetat/iconofast/blob/demo-layers/src/components/scene/scene.jsx)
+   * [Layers - Filler is centered](https://github.com/Dedetat/iconofast/blob/demo-layers-center/src/components/scene/scene.jsx#L31)
+   * [Layers - Black & White](https://github.com/Dedetat/iconofast/blob/demo-layers-center-black/src/components/scene/scene.jsx#L51)
+ -  Bonus: [Welcome gif](https://github.com/Dedetat/iconofast/blob/welcome/src/components/scene/scene.jsx)

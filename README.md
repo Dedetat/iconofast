@@ -31,5 +31,5 @@ Welcome to our source speech repository about [flubber](https://github.com/veltm
  - Layers
    * [Layers](https://github.com/Dedetat/iconofast/blob/demo-layers/src/components/scene/scene.jsx)
    * [Layers - Filler is centered](https://github.com/Dedetat/iconofast/blob/demo-layers-center/src/components/scene/scene.jsx#L31)
-   * [Layers - White&Black](https://github.com/Dedetat/iconofast/blob/demo-layers-center-black/src/components/scene/scene.jsx#L51)
+   * [Layers - Black & White](https://github.com/Dedetat/iconofast/blob/demo-layers-center-black/src/components/scene/scene.jsx#L51)
  -  Bonus: [Welcome gif](https://github.com/Dedetat/iconofast/blob/welcome/src/components/scene/scene.jsx)

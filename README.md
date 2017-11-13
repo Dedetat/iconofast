@@ -19,7 +19,7 @@ Welcome to our source speech repository about [flubber](https://github.com/veltm
  - Fabien JUIF [[Twitter](https://twitter.com/fabienjuif) | [Github](https://github.com/fabienjuif)]
 
 ## Deck
- - Soon
+ - [Latest](https://docs.google.com/presentation/d/16uJIRTJbvknvPyrH_nE-AmLdVBKw8hy6Rk6aAggrpYk/edit?usp=sharing) (BDX.io Bordeaux, France - 2017 /en/)
 
 ## Videos
  - [BDX.io Bordeaux, France - 2017 /fr/](https://youtu.be/yldzlHIBWfY?t=13226)

@@ -26,7 +26,7 @@ const titlePart3 = css({
 
 const button = css({
   margin: '7vh auto',
-  padding: '2em 10em',
+  padding: '2em 8em',
   borderStyle: 'none',
   borderRadius: '.2em',
   textTransform: 'uppercase',

@@ -44,8 +44,7 @@ at @bdxio #bdxio`
             <span className={styles.score}>&nbsp;{numberFormat.format(score)}&nbsp;</span>
             score!
           </h2>
-          <div>Feel free to tweet about it</div>
-          <div>or contribute on Github</div>
+          <div>Feel free to tweet about it or contribute on Github</div>
           <Github />
         </div>
         <div className={styles.actions}>

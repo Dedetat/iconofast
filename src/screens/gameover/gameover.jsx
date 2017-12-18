@@ -12,7 +12,7 @@ class Gameover extends Component {
 Can you beat me ? 💪
 -
 @MilletDelphine / @fabienjuif
-at @bdxio #bdxio`
+at @RennesJS #RennesJS`
 
     const attach = () => {
       if (!window.twttr || !window.twttr.widgets) {
